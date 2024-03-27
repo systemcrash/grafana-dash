@@ -1,6 +1,6 @@
 # Ingate Dashboards for Grafana
 
-The dashboards here are intended to provide visualisation for all SIP and generic metrics available in the v6.3.x firmware. The layout and data presented in each dashboard is the same - the only differences between dashboards are the back-end DB that they use i.e. how its queries are made. It is safe to install and use multiple copies of the same or different dashboards. Future dashboards and their panels may provide additional statistics as they become available in the firmware and should retain compatability with older firmwares.
+The dashboards here are intended to provide visualisation for all SIP and generic metrics available in the v6.3.x firmware. The layout and data presented in each dashboard is the same - the only differences between dashboards are the back-end DB that they use i.e. how its queries are made. It is safe to install and use multiple copies of the same or different dashboards. Future dashboards and their panels may provide additional statistics as they become available in the firmware and should retain compatibility with older firmwares.
 
 To read which metrics are available for your Firmware version, please refer to the user-manual. The minimum required firmware version for TSDB and metrics is v6.3.0. 
 
@@ -30,7 +30,7 @@ To use the InfluxDB dashboard requires:
 * an [InfluxDB datasource](https://grafana.com/docs/grafana/latest/features/datasources/influxdb/) configured in Grafana
 
 
-The InfluxDB dashboard was built progressively on Grafana v6.3-v6.7, and was exported from Grafana v7.0 (although it does not yet utilise any v7 specific features). 
+The InfluxDB dashboard was built progressively on Grafana v6.3-v6.7, and was exported from Grafana 10.4.1. 
 
 Note: InfluxDB for CollectD requires only the default `types.db`.
 
@@ -43,7 +43,7 @@ To use the GraphiteDB dashboard requires:
 * a [GraphiteDB datasource](https://grafana.com/docs/grafana/latest/features/datasources/graphite/) configured in Grafana
 
 
-The GraphiteDB dashboard was built on Grafana v7, and was exported from Grafana v7.0 (although it does not yet utilise any v7 specific features). It should be compatible with Grafana v6.x
+The InfluxDB dashboard was built progressively on Grafana v6.3-v6.7, and was exported from Grafana 10.4.1. 
 
 Note: GraphiteDB requires only port 2003
 
@@ -56,12 +56,13 @@ To use the Prometheus dashboard requires:
 * a [Prometheus datasource](https://grafana.com/docs/grafana/latest/features/datasources/prometheus/) configured in Grafana
 
 
-The GraphiteDB dashboard was built on Grafana v7, and was exported from Grafana v7.2 (although it does not yet utilise any v7 specific features). It should be compatible with Grafana v6.x
+The GraphiteDB dashboard was built on Grafana v7, and was exported from Grafana 10.4.1. 
 
 
 We welcome PRs, fixes and contributions for these dashboards and other DB types.
 
 
-# Version history 
+# Version history
 
-v1.0 - initial release
+* v1.0 - initial release - 2020-05-20
+* v1.1 - update panels via Grafana 10.4.1 to remove angular based graphs - 2024-03-27
